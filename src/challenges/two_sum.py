@@ -19,6 +19,25 @@ def two_sum(nums: List[int], target: int) -> List[int]:
 
 def two_sum_2(nums: List[int], target: int) -> List[int]:
     """
+
+    Note: This will only work when you are asked for the numbers intead of
+    the indices.
+
+    Complexity:
+        Time O(nLog(n))
+        Space O(1)
     """
-    pass
+    nums.sort()
+    left = 0
+    right = len(nums) - 1
+
+    while left < right:
+        current_sum = nums[left] + nums[right]
+        if current_sum == target:
+            return [left, right]
+        elif current_sum < target:
+            left += 1
+        else:
+            right -= 1
+
 
