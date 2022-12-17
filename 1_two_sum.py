@@ -17,3 +17,8 @@ def two_sum(nums: List[int], target: int) -> List[int]:
             return [i, seen[result]]
         seen[n] = i
 
+def two_sum_2(nums: List[int], target: int) -> List[int]:
+    """
+    """
+    pass
+
