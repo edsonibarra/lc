@@ -6,6 +6,14 @@ from typing import List
 
 def two_sum(nums: List[int], target: int) -> List[int]:
     """
+    Complexity:
+        Time O(n)
+        Space O(n)
     """
-    pass
+    seen = dict()
+    for i, n in enumerate(nums):
+        result: int = target - n
+        if result in seen:
+            return [i, seen[result]]
+        seen[n] = i
 
